@@ -1,0 +1,6 @@
+(set-logic QF_LIA)
+(declare-const x Int)
+(declare-const y Int)
+(assert (or (= x 8) (= y 6)))
+(check-sat)
+(exit)

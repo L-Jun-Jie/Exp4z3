@@ -16,7 +16,7 @@ LDFLAGS := -lz3
 # 自动获取源文件列表和目标文件列表
 SOURCES := $(wildcard $(SRC_DIR)/*.cpp)
 OBJECTS := $(SOURCES:$(SRC_DIR)/%.cpp=$(BUILD_DIR)/%.o)
-TARGET := n-queens
+TARGET := demosampler
 
 # 默认目标
 all: $(TARGET)
@@ -36,3 +36,4 @@ $(BUILD_DIR):
 # 清除生成的文件
 clean:
 	rm -rf $(BUILD_DIR)
+	rm -rf $(TARGET)

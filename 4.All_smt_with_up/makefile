@@ -8,7 +8,7 @@ CXX := g++
 LD := g++
 
 # 编译器标志
-CXXFLAGS := -g -Ofast -Wall -static -std=c++20
+CXXFLAGS := -g -O0 -Wall -static -std=c++20
 
 # 链接器标志，包括库的搜索路径和链接的库
 LDFLAGS := -lz3
@@ -16,7 +16,7 @@ LDFLAGS := -lz3
 # 自动获取源文件列表和目标文件列表
 SOURCES := $(wildcard $(SRC_DIR)/*.cpp)
 OBJECTS := $(SOURCES:$(SRC_DIR)/%.cpp=$(BUILD_DIR)/%.o)
-TARGET := n-queens
+TARGET := test
 
 # 默认目标
 all: $(TARGET)

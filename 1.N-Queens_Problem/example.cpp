@@ -1,7 +1,4 @@
 #include "user_propagator.h"
-#include "user_propagator_created_maximisation.h"
-#include "user_propagator_internal_maximisation.h"
-#include "user_propagator_subquery_maximisation.h"
 #include "user_propagator_with_theory.h"
 
 /**

@@ -1,10 +1,9 @@
 # Z3 User propagator
-
 ## 1. Compiling the sample program
 ```shell
 $ cd user_propagator
 $ make
-$ ./user_propagator
+$ ./n-queens
 ```
 ## 2. user propagation component
 ### 2.1. Fixed event handler `fixed`
