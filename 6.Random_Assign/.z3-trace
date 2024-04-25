@@ -1,0 +1,329 @@
+-------- [solver_na2as] check_sat_core ../src/solver/solver_na2as.cpp:66 ---------
+(declare-fun q () Bool)
+(declare-fun p () Bool)
+(declare-fun r () Bool)
+(assert (or p q))
+(assert (or (not p) r))
+(assert (or (not q) (not r)))
+(assert (or p (not q)))
+------------------------------------------------
+-------- [solver_na2as] check_sat_core2 ../src/smt/smt_solver.cpp:199 ---------
+smt_solver::check_sat_core: 0
+------------------------------------------------
+-------- [before_search] check ../src/smt/smt_context.cpp:3606 ---------
+Logical context:
+scope-lvl: 0
+base-lvl:  0
+search-lvl:  0
+inconsistent(): 0
+m_asserted_formulas.inconsistent(): 0
+bool var defs: 
+0 #1 := true
+1 #5 := p
+2 #6 := q
+3 #9 := r
+enode defs: 
+#2 := false
+#33 := 1
+#34 := 1.0
+#35 := 0
+#36 := 0.0
+#7 := (or p q)
+#8 := (not p)
+#10 := (or #8 r)
+#12 := (not r)
+#11 := (not q)
+#13 := (or #11 #12)
+#14 := (or p #11)
+asserted formulas:
+#7 #10 #13 #14 
+binary clauses: 
+(-1 3)
+(1 -2)
+(1 2)
+(-2 -3)
+equivalence classes: 6
+#1: true
+#2: false
+#33: 1
+#34: 1.0
+#35: 0
+#36: 0.0
+remaining case-splits:
+#5 #6 #9 
+expression -> bool_var:
+(#1 -> 0) (#5 -> 1) (#6 -> 2) (#9 -> 3) 
+relevant exprs:
+#7 #10 #13 #14 
+Theory arithmetic:
+number of constraints = 8
+(0) j0 >= 1
+(1) j0 <= 1
+(2) j1 >= 1
+(3) j1 <= 1
+(4) j2 >= 0
+(5) j2 <= 0
+(6) j3 >= 0
+(7) j3 <= 0
+
+inf columns: none
+[0]    := (0, 0)               [(1, 0), (1, 0)]
+[1]    := (0, 0)               [(1, 0), (1, 0)]
+[2]    := (0, 0)               [(0, 0), (0, 0)]
+[3]    := (0, 0)               [(0, 0), (0, 0)]
+irr: v0 j0, int := 33: 1
+irr: v1 j1 := 34: 1.0
+irr: v2 j2, int := 35: 0
+irr: v3 j3 := 36: 0.0
+recfun
+disabled guards:
+
+enabled guards:
+
+decl2enodes:
+hot bool vars:
+------------------------------------------------
+-------- [search] search ../src/smt/smt_context.cpp:3715 ---------
+Logical context:
+scope-lvl: 0
+base-lvl:  0
+search-lvl:  0
+inconsistent(): 0
+m_asserted_formulas.inconsistent(): 0
+bool var defs: 
+0 #1 := true
+1 #5 := p
+2 #6 := q
+3 #9 := r
+enode defs: 
+#2 := false
+#33 := 1
+#34 := 1.0
+#35 := 0
+#36 := 0.0
+#7 := (or p q)
+#8 := (not p)
+#10 := (or #8 r)
+#12 := (not r)
+#11 := (not q)
+#13 := (or #11 #12)
+#14 := (or p #11)
+asserted formulas:
+#7 #10 #13 #14 
+binary clauses: 
+(-1 3)
+(1 -2)
+(1 2)
+(-2 -3)
+equivalence classes: 6
+#1: true
+#2: false
+#33: 1
+#34: 1.0
+#35: 0
+#36: 0.0
+remaining case-splits:
+#5 #6 #9 
+expression -> bool_var:
+(#1 -> 0) (#5 -> 1) (#6 -> 2) (#9 -> 3) 
+relevant exprs:
+#7 #10 #13 #14 
+Theory arithmetic:
+number of constraints = 8
+(0) j0 >= 1
+(1) j0 <= 1
+(2) j1 >= 1
+(3) j1 <= 1
+(4) j2 >= 0
+(5) j2 <= 0
+(6) j3 >= 0
+(7) j3 <= 0
+
+inf columns: none
+[0]    := (0, 0)               [(1, 0), (1, 0)]
+[1]    := (0, 0)               [(1, 0), (1, 0)]
+[2]    := (0, 0)               [(0, 0), (0, 0)]
+[3]    := (0, 0)               [(0, 0), (0, 0)]
+irr: v0 j0, int := 33: 1
+irr: v1 j1 := 34: 1.0
+irr: v2 j2, int := 35: 0
+irr: v3 j3 := 36: 0.0
+recfun
+disabled guards:
+
+enabled guards:
+
+decl2enodes:
+hot bool vars:
+#1  ->  #1, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#2  ->  #2, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#33  ->  #33, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#34  ->  #34, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#35  ->  #35, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+#36  ->  #36, lbls: {}, plbls: {}, root->lbls: {}, root->plbls: {}
+------------------------------------------------
+-------- [search_detail] search ../src/smt/smt_context.cpp:3716 ---------
+asserted formulas:
+(or p q)
+(or (not p) r)
+(or (not q) (not r))
+(or p (not q))
+inconsistent: 0
+------------------------------------------------
+-------- [literal_occ] init_search ../src/smt/smt_context.cpp:3665 ---------
+------------------------------------------------
+-------- [search_lite] search ../src/smt/smt_context.cpp:3722 ---------
+searching...
+------------------------------------------------
+-------- [bounded_search] bounded_search ../src/smt/smt_context.cpp:3839 ---------
+starting bounded search...
+------------------------------------------------
+-------- [propagate] propagate ../src/smt/smt_context.cpp:1659 ---------
+propagating... 0:0
+------------------------------------------------
+-------- [bcp] bcp ../src/smt/smt_context.cpp:300 ---------
+bcp...
+------------------------------------------------
+-------- [decide_var] decide ../src/smt/smt_context.cpp:1836 ---------
+berfore decide_var: 24743
+------------------------------------------------
+-------- [random_split] next_case_split ../src/smt/smt_case_split_queue.cpp:134 ---------
+next: 2 get_assignment(next): l_undef
+------------------------------------------------
+-------- [decide_var] decide ../src/smt/smt_context.cpp:1860 ---------
+after decide_var: 2
+------------------------------------------------
+-------- [decide] decide ../src/smt/smt_context.cpp:1865 ---------
+splitting, lvl: 1
+------------------------------------------------
+-------- [decide_detail] decide ../src/smt/smt_context.cpp:1867 ---------
+q
+------------------------------------------------
+-------- [decide] decide ../src/smt/smt_context.cpp:1881 ---------
+case split -2
+activity: 0
+------------------------------------------------
+-------- [assign_core] assign_core ../src/smt/smt_context.cpp:283 ---------
+decision: -2 (not q) 
+relevant: 0 level: 1 is atom 0
+axiom
+------------------------------------------------
+-------- [phase_selection] assign_core ../src/smt/smt_context.cpp:287 ---------
+saving phase, is_pos: 0 l: -2
+------------------------------------------------
+-------- [propagate] propagate ../src/smt/smt_context.cpp:1659 ---------
+propagating... 0:1
+------------------------------------------------
+-------- [bcp] bcp ../src/smt/smt_context.cpp:300 ---------
+bcp...
+------------------------------------------------
+-------- [assign_core] assign_core ../src/smt/smt_context.cpp:283 ---------
+propagating: 1 p 
+relevant: 0 level: 1 is atom 0
+bin -2
+------------------------------------------------
+-------- [phase_selection] assign_core ../src/smt/smt_context.cpp:287 ---------
+saving phase, is_pos: 1 l: 1
+------------------------------------------------
+-------- [assign_core] assign_core ../src/smt/smt_context.cpp:283 ---------
+propagating: 3 r 
+relevant: 0 level: 1 is atom 0
+bin 1
+------------------------------------------------
+-------- [phase_selection] assign_core ../src/smt/smt_context.cpp:287 ---------
+saving phase, is_pos: 1 l: 3
+------------------------------------------------
+-------- [decide_var] decide ../src/smt/smt_context.cpp:1836 ---------
+berfore decide_var: 24743
+------------------------------------------------
+-------- [final_check_result] bounded_search ../src/smt/smt_context.cpp:3900 ---------
+fcs: done last_search_failure: 0
+------------------------------------------------
+-------- [search_bug] search ../src/smt/smt_context.cpp:3730 ---------
+status: l_true, inconsistent: 0
+------------------------------------------------
+-------- [assigned_literals_per_lvl] search ../src/smt/smt_context.cpp:3731 ---------
+[0 3], num_assigned: 3
+------------------------------------------------
+-------- [guessed_literals] search ../src/smt/smt_context.cpp:3739 ---------
+
+(not q)
+------------------------------------------------
+-------- [after_search] check_finalize ../src/smt/smt_context.cpp:3431 ---------
+result: l_true
+Logical context:
+scope-lvl: 1
+base-lvl:  0
+search-lvl:  0
+inconsistent(): 0
+m_asserted_formulas.inconsistent(): 0
+bool var defs: 
+0 #1 := true
+1 #5 := p
+2 #6 := q
+3 #9 := r
+enode defs: 
+#2 := false
+#33 := 1
+#34 := 1.0
+#35 := 0
+#36 := 0.0
+#7 := (or p q)
+#8 := (not p)
+#10 := (or #8 r)
+#12 := (not r)
+#11 := (not q)
+#13 := (or #11 #12)
+#14 := (or p #11)
+asserted formulas:
+#7 #10 #13 #14 
+binary clauses: 
+(-1 3)
+(1 -2)
+(1 2)
+(-2 -3)
+current assignment:
+level 1
+-2 (not #6): (not q) axiom
+1 #5: p bin -2
+3 #9: r bin 1
+equivalence classes: 6
+#1: true
+#2: false
+#33: 1
+#34: 1.0
+#35: 0
+#36: 0.0
+expression -> bool_var:
+(#1 -> 0) (#5 -> 1) (#6 -> 2) (#9 -> 3) 
+relevant exprs:
+#7 #10 #13 #14 #5 #11 #9 #6 
+Theory arithmetic:
+number of constraints = 8
+(0) j0 >= 1
+(1) j0 <= 1
+(2) j1 >= 1
+(3) j1 <= 1
+(4) j2 >= 0
+(5) j2 <= 0
+(6) j3 >= 0
+(7) j3 <= 0
+
+inf columns: none
+[0]    := (1, 0)               [(1, 0), (1, 0)]
+[1]    := (1, 0)               [(1, 0), (1, 0)]
+[2]    := (0, 0)               [(0, 0), (0, 0)]
+[3]    := (0, 0)               [(0, 0), (0, 0)]
+irr: v0 j0, int := 33: 1
+irr: v1 j1 := 34: 1.0
+irr: v2 j2, int := 35: 0
+irr: v3 j3 := 36: 0.0
+recfun
+disabled guards:
+
+enabled guards:
+
+decl2enodes:
+hot bool vars:
+case splits
+------------------------------------------------
